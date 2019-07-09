@@ -202,7 +202,9 @@ var closePopup = function () {
  */
 var popupEscPress = function (evt) {
   if (evt.keyCode === ESC_KEYCODE) {
-    closePopup();
+    if (document.activeElement.className !== 'text__description') {
+      closePopup();
+    }
   }
 };
 
